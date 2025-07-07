@@ -2,6 +2,7 @@
 import { Routes, Route, Link } from 'react-router-dom';
 import IssueLicense from './pages/IssueLicense';
 import LicenseList from './pages/LicenseList';
+import LicenseDetail from './pages/LicenseDetail';
 
 export default function App() {
   return (
@@ -23,6 +24,7 @@ export default function App() {
         <Route path="/licenses" element={<LicenseList />} />
         <Route path="/issue" element={<IssueLicense />} />
         <Route path="*" element={<div>Not Found</div>} />
+        <Route path="/license/:key" element={<LicenseDetail />} />
       </Routes>
     </div>
   );
